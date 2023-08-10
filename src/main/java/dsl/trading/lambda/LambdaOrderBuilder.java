@@ -32,9 +32,9 @@ public class LambdaOrderBuilder {
 
     private void trade(Consumer<TradeBuilder> consumer, Trade.Type type) {
         TradeBuilder builder = new TradeBuilder();
-        builder.trade.setType(type);
+        builder.type(type);
         consumer.accept(builder);
-        order.addTrade(builder.trade);
+        order.addTrade(builder.getTrade());
     }
 
 }

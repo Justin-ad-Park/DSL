@@ -6,7 +6,11 @@ import domain.trading.stock.Trade;
 import java.util.function.Consumer;
 
 public class TradeBuilder {
-    protected Trade trade = new Trade();
+    private Trade trade = new Trade();
+
+    public void type(Trade.Type type) {
+        trade.setType(type);
+    }
 
     public void quantity(int quantity) {
         trade.setQuantity(quantity);
@@ -22,15 +26,8 @@ public class TradeBuilder {
         trade.setStock(builder.stock);
     }
 
-    public static class StockBuilder {
-        private Stock stock = new Stock();
-
-        public void symbol(String stockNM) {
-            stock.setSymbol(stockNM);
-        }
-
-        public void market(String market) {
-            stock.setMarket(market);
-        }
+    public Trade getTrade() {
+        return trade;
     }
+
 }
