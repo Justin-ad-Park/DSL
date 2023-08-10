@@ -28,7 +28,9 @@ public class LambdaOrderBuilder {
         trade(consumer, Trade.Type.BUY);
     }
 
-    public void sell(Consumer<TradeBuilder> consumer) { trade(consumer, Trade.Type.SELL); }
+    public void sell(Consumer<TradeBuilder> consumer) {
+        trade(consumer, Trade.Type.SELL);
+    }
 
     private void trade(Consumer<TradeBuilder> consumer, Trade.Type type) {
         TradeBuilder builder = new TradeBuilder();
