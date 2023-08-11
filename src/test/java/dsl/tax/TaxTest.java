@@ -1,5 +1,6 @@
 package dsl.tax;
 
+import domain.tax.Tax;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

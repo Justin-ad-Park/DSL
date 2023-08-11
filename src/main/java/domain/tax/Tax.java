@@ -1,4 +1,4 @@
-package dsl.tax;
+package domain.tax;
 
 public class Tax {
     //지역세
@@ -6,7 +6,7 @@ public class Tax {
         return value * 1.05;
     }
 
-    //부과 가치세
+    //부가가치세
     public static double vat(double value) {
         return value * 1.1;
     }
